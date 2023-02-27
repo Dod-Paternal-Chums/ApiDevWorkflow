@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UnpJnAUrYn85GEMhAhxJGnOABFTQlPh5/kHLzcsjuFCRjNEwboIoL2HSfX7W94S010M7bhePf3DfT7ErQpjQjg==",
+  "success": true,
+  "projectFilePath": "C:\\repo\\ApiDevWorkflow\\APITestProject\\APITestProject\\APITestProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fuzzy\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
