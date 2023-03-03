@@ -1,30 +1,32 @@
 ﻿using APITestProject.Models;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.WebUtilities;
 using System.Net.Http;
+using RestSharp;
 
 namespace APITestProject
 {
     class Program
     {
-        public static string MainBungie { get; set; }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            MainBungie = "https://www.bungie.net/platform/Destiny/";
-            var item = getBungieUser();
+            getBungieUser();
         }
 
-        static Response<bungieNetUser> getBungieUser()
+        static void getBungieUser()
         {
-            var location = new Uri("");
-
-            using (var client = new HttpClient())
+            var options = new RestClientOptions("https://www.bungie.net")
             {
-                client.DefaultRequestHeaders.Add("X-API-Key", "YOUR-API-KEY-HERE");
-                string jsonResponse = client.GetStringAsync(MainBungie + location).Result;
-                return JsonConvert.DeserializeObject<Response<bungieNetUser>>(jsonResponse);
-            }
+                MaxTimeout = -1,
+            };
+            var client = new RestClient(options);
+            var request = new RestRequest("/Platform/Destiny2/1/Profile/4611686018434591512/LinkedProfiles", Method.Get);
+            request.AddHeader("X-API-Key", "2eb1b964655942fba6dd3e0ee2dd9c2d");
+            RestResponse response =  client.ExecuteAsync(request).Result;
+            Console.WriteLine(response.Content);
         }
+
     }
 }
