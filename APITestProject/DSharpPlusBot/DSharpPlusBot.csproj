@@ -9,4 +9,8 @@
     <PackageReference Include="DSharpPlus" Version="4.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\APITestProject\APITestProject.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,7 @@
 ﻿using DSharpPlus;
 using System;
 using System.Threading.Tasks;
+using APITestProject.Calls;
 
 namespace DSharpPlusBot
 {
@@ -10,17 +11,18 @@ namespace DSharpPlusBot
 
         public async Task MainAsync()
         {
+            
             var discord = new DiscordClient(new DiscordConfiguration()
             {
-                Token = "MTA3OTg0NjQ4OTQzNTY4NTAwOQ.Gjrzl7.fBeziEa-IzmuUIKcuZiYUeSe9U98a-cacsGH4U",
+                Token = "MTA3OTg0NjQ4OTQzNTY4NTAwOQ.Gcn6tX.hTpvXsZWet3BpbkY9qMEGJGNsPoUT9BK5R5QXA",
                 TokenType = TokenType.Bot,
                 Intents = DiscordIntents.AllUnprivileged | DiscordIntents.MessageContents
             });
 
             discord.MessageCreated += async (s, e) =>
             {
-                if (e.Message.Content.ToLower().StartsWith("omega"))
-                    await e.Message.RespondAsync("is a bitch");
+                if (e.Message.Content.ToLower().StartsWith("labregold"))
+                    await e.Message.RespondAsync(GetUsers.getBungieUser());
             };
 
             await discord.ConnectAsync();
