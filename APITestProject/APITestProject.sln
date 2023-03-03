@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33214.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITestProject", "APITestProject\APITestProject.csproj", "{E53B211A-7150-4E44-AB9E-90BFD68BF093}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITestProject", "APITestProject\APITestProject.csproj", "{E53B211A-7150-4E44-AB9E-90BFD68BF093}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSharpPlusBot", "DSharpPlusBot\DSharpPlusBot.csproj", "{A681D867-09E0-4330-AFB5-E1E39C2B7843}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E53B211A-7150-4E44-AB9E-90BFD68BF093}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E53B211A-7150-4E44-AB9E-90BFD68BF093}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E53B211A-7150-4E44-AB9E-90BFD68BF093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A681D867-09E0-4330-AFB5-E1E39C2B7843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A681D867-09E0-4330-AFB5-E1E39C2B7843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A681D867-09E0-4330-AFB5-E1E39C2B7843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A681D867-09E0-4330-AFB5-E1E39C2B7843}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
